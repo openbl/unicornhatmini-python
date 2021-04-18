@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+set -ex
+
+for config_file in "${PWD}"/config/*.service; do
+  sudo systemctl enable "${config_file}"
+done

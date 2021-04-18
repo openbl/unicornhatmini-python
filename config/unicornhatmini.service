@@ -1,0 +1,11 @@
+[Unit]
+Description=Unicorn Hat Mini
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/brian/src/github.com/openbl/unicornhatmini-python/examples/colour-cycle.py
+ExecStopPost=/usr/bin/python3 /home/brian/src/github.com/openbl/unicornhatmini-python/examples/clear.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
